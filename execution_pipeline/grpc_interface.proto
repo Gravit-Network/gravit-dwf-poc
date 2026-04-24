@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package gravit.dwf.v1;
+
+import "google/protobuf/timestamp.proto";
+
+service IntegrationService {
+  rpc RunAtoCPipeline(TestScenario) returns (FalconYieldContext);
+  rpc VerifyFalconYield(YieldPayoutVerification) returns (YieldPayoutVerification);
+  rpc OptimizeAgenticYield(FalconYieldContext) returns (FalconYieldContext);
+}
+
+message TestScenario {
+  enum Type { CLOSED_MARKET = 0; YIELD_SPIKE = 1; BLACK_SWAN = 2; }
+  Type type = 1;
+  string asset = 2;
+  float expected_yield = 3;
+  string agent_id = 4;
+}
+
+message FalconYieldContext {
+  float cumulative_payout = 1;
+  float supply = 2;
+  float overcollateralization = 3;
+  string xstocks_equity_id = 4;
+  GQRVPProof proof = 5;
+}
+
+message YieldPayoutVerification {
+  string asset_symbol = 1;
+  float payout_amount = 2;
+  float overcollateralization = 3;
+  GQRVPProof gravit_proof = 4;
+}
+
+message GQRVPProof {
+  string proof_hash = 1;
+  bool valid = 2;
+}
