@@ -1,7 +1,28 @@
-# Gravit × DWF  
-## Epistemic Execution Infrastructure for Capital Markets
+# Gravit × DWF
 
-Gravit defines Epistemic Execution Systems (EES) that govern not execution speed, but execution legitimacy.
+## Epistemic Execution System (EES)
 
-Core principle:
-Execution is not triggered by signals. It is triggered by validated knowledge.
+Gravit is an epistemic validation layer for capital execution systems.
+
+It ensures that only validated knowledge can trigger execution.
+
+---
+
+## Core Principle
+
+Execution is not triggered by signals.
+
+Execution is triggered by validated knowledge.
+
+---
+
+## System Flow
+
+Signal → Epistemic Validation → Execution Decision
+
+---
+
+## Demo
+
+```bash
+bash scripts/run_demo.sh
