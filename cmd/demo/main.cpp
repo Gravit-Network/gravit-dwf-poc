@@ -2,6 +2,7 @@
 #include "TestScenario.h"
 #include "FalconYieldContext.h"
 #include "grpc_interface.h"
+#include "a_to_b_to_c.h"
 
 int main() {
     std::cout << "=== Gravit × DWF Demo (Triad v2.0 EES) ===" << std::endl;

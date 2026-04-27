@@ -17,3 +17,5 @@ compile_commands.json
 *.dylib
 *.exe
 *.out
+
+demo
