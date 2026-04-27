@@ -3,3 +3,17 @@ build/
 *.log
 .vscode/
 .DS_Store
+
+# CMake artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Build artifacts
+*.a
+*.so
+*.dylib
+*.exe
+*.out
