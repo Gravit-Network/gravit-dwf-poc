@@ -1,6 +1,6 @@
 #include "GQRVPProof.h"
+#include "TestScenario.h"
 
 bool isAdversarial(const TestScenario& scenario) {
-    // GQRVP adversarial resistance check
-    return scenario.expectedYield > 50.0;  // example black-swan threshold
+    return scenario.expectedYield > 50.0f;
 }
