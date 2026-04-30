@@ -11,7 +11,7 @@ add_executable(demo
     epistemic_core/validation_engine.cpp
     epistemic_core/contradiction_graph.cpp
     epistemic_core/adversarial_model.cpp
-	# execution_pipeline/grpc_interface.cpp
+	execution_pipeline/grpc_interface.cpp
 	# replay_engine/trace_store.cpp
 )
 

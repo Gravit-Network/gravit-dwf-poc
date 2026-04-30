@@ -5,7 +5,7 @@
 
 FalconYieldContext executeAtoBtoC(TestScenario scenario) {
     registerAgentCard(scenario.agentId);
-    FalconYieldContext verified = fetchFalconMetrics(scenario.asset);
+    FalconYieldContext verified = verifyFalconYield(scenario.asset);
 
     if (verified.proof.valid) {
         FalconYieldContext ctx = verified;

@@ -9,7 +9,7 @@ It ensures that only validated knowledge triggers execution.
 ```bash
 git clone --recursive https://github.com/Gravit-Network/gravit-dwf-poc.git
 cd gravit-dwf-poc
-mkdir build && cd build
-cmake ..
+cmake .
 make -j4
 ./demo
+```
