@@ -6,6 +6,7 @@
 
 FalconYieldContext verifyFalconYield(const std::string& asset) {
 	FalconYieldContext ctx;
+	// TODO: Implement real gRPC call to verify yields
 	ctx.proof.valid = true;
 	return ctx;
 }
@@ -16,6 +17,10 @@ FalconYieldContext optimizeAgenticYield(const FalconYieldContext& ctx) {
 
 void registerAgentCard(const std::string& agentId) {
 	// Stub: register agent with the system
+}
+
+void storeQuantumTrace(const FalconYieldContext& ctx) {
+	// Stub: store quantum trace data
 }
 
 std::string generateGQRVPHash(const FalconYieldContext& ctx) {

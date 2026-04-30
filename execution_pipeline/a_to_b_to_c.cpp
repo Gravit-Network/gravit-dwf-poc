@@ -6,17 +6,16 @@
 #include <iostream>
 
 FalconYieldContext executeAtoBtoC(TestScenario scenario) {
-	registerAgentCard(scenario.agentId);
+    registerAgentCard(scenario.agentId);
+    FalconYieldContext verified = fetchFalconMetrics(scenario.asset);
 
-	FalconYieldContext verified = fetchFalconMetrics(scenario.asset);
+    if (verified.proof.valid) {
+        FalconYieldContext ctx = verified;
+        storeQuantumTrace(ctx);
+        std::cout << "[A→B→C] Level C Autopilot activated for " << scenario.asset << std::endl;
+        return ctx;
+    }
 
-	if (verified.proof.valid) {
-		FalconYieldContext ctx = verified;
-		storeQuantumTrace(ctx);
-		std::cout << "[A→B→C] Level C Autopilot activated for " << scenario.asset << std::endl;
-		return ctx;
-	}
-
-	std::cout << "[A→B→C] Validation failed" << std::endl;
-	return FalconYieldContext{};
+    std::cout << "[A→B→C] Validation failed" << std::endl;
+    return FalconYieldContext{};
 }
