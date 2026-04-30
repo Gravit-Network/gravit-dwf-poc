@@ -1,11 +1,13 @@
 #include "grpc_interface.h"
 #include "TestScenario.h"
 #include "FalconYieldContext.h"
+#include "a_to_b_to_c.h"
+#include "../market_integration/falcon_adapter.h"
 #include <iostream>
 
 FalconYieldContext executeAtoBtoC(TestScenario scenario) {
     registerAgentCard(scenario.agentId);
-    FalconYieldContext verified = verifyFalconYield(scenario.asset);
+    FalconYieldContext verified = fetchFalconMetrics(scenario.asset);
 
     if (verified.proof.valid) {
         FalconYieldContext ctx = verified;
