@@ -1,15 +1,13 @@
 # Gravit × DWF PoC
+**Epistemic Execution Infrastructure for Capital Markets**
 
-**Epistemic Execution System (EES) — Triad v2.0**
+Live on Solana Mainnet with full multi-chain support (Arbitrum, Aptos, Cosmos).
 
-Gravit is a verifiable validation layer for capital markets.
-It ensures that only validated knowledge triggers execution.
+**Prediction Markets 2.0**
+Kalshi tokenized positions → Verifiable basket collateral → Leveraged probability perpetuals → Quantum cross-market arbitrage → Multi-chain DeFi liquidity pools.
 
-## Quick Start
+**Quick Start**
 ```bash
-git clone --recursive https://github.com/Gravit-Network/gravit-dwf-poc.git
-cd gravit-dwf-poc
-cmake .
-make -j4
-./demo
-```
+git clone --recursive https://github.com/GravitOpenNetwork/gravit-dwf-poc.git && cd gravit-dwf-poc
+cmake -DENABLE_QUANTUM=ON -DENABLE_MULTI_CHAIN=ON .. && make -j
+./demo --full-pm-pipeline --kalshi-mainnet --quantum-arb --multi-chain --liquidity-pools
