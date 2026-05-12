@@ -5,7 +5,7 @@
 **Prepared for:** Mr. Andrei Grachev, Managing Partner, DWF Labs
 
 ## Executive Summary
-Prediction markets have reached institutional scale with over $6B weekly notional volume. Capital remains largely idle due to jump risk, binary valuation challenges, and limited DeFi composability.
+Prediction markets have reached institutional scale with over $6B weekly notional volume. However, capital remains largely idle due to jump risk, binary valuation challenges, and limited DeFi composability.
 
 Gravit Epistemic Engine v2.5 solves these limitations and is now live on mainnet with multi-chain DeFi liquidity pools.
 
@@ -16,4 +16,4 @@ Gravit Epistemic Engine v2.5 solves these limitations and is now live on mainnet
 - Blended APY: 13–15%
 - Jump risk hedged: 97.5%
 
-Repository: https://github.com/GravitOpenNetwork/gravit-dwf-poc/releases/tag/v2.5-pilot-launch-revised
+Repository: https://github.com/GravitOpenNetwork/gravit-dwf-poc/

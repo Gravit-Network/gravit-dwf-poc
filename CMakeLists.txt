@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.22)
-project(GravitDWF_PoC)
+project(GravitDWF_PoC VERSION 2.5 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 option(ENABLE_QUANTUM "Enable Quantum modules" ON)
 option(ENABLE_MULTI_CHAIN "Enable multi-chain support" ON)
@@ -17,4 +18,14 @@ add_executable(demo
     perps_layer/probability_perpetuals.cpp
 )
 
-target_include_directories(demo PRIVATE epistemic_core)
+target_include_directories(demo PRIVATE epistemic_core liquidity_pools perps_layer)
+
+if(ENABLE_QUANTUM)
+    target_compile_definitions(demo PRIVATE ENABLE_QUANTUM)
+endif()
+
+if(ENABLE_MULTI_CHAIN)
+    target_compile_definitions(demo PRIVATE ENABLE_MULTI_CHAIN)
+endif()
+
+install(TARGETS demo DESTINATION bin)
