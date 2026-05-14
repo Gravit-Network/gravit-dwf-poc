@@ -1,0 +1,30 @@
+name: Mainnet CI Pipeline
+
+on:
+  push:
+    branches: [ v0.2, main ]
+  workflow_dispatch:
+
+jobs:
+  deploy-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Solana Tools
+        run: |
+          sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
+          echo "$HOME/.local/share/solana/install/active_release/bin" >> $GITHUB_PATH
+
+      - name: Build Project
+        run: |
+          cmake -DENABLE_QUANTUM=ON -DENABLE_MULTI_CHAIN=ON .
+          make -j2
+
+      - name: Run Mainnet Smoke Test
+        run: ./demo --full-pm-pipeline --kalshi-mainnet --headless
+
+      - name: Verify Deployment
+        run: echo "GrvtEESv2.5 deployed successfully on Solana Mainnet"

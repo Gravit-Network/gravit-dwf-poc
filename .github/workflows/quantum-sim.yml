@@ -1,0 +1,20 @@
+name: Quantum Simulation Test
+
+on:
+  push:
+    paths:
+      - 'epistemic_core/quantum_arb_v2.3/**'
+
+jobs:
+  quantum-sim:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Quantum Modules
+        run: |
+          cmake -DENABLE_QUANTUM=ON .
+          make -j2
+
+      - name: Run Quantum Arbitrage Simulation
+        run: ./demo --quantum-arb --headless
