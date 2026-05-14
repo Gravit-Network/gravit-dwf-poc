@@ -1,6 +1,0 @@
-[submodule "gravitnet"]
-	path = gravitnet
-	url = https://github.com/Gravit-Network/gravitnet.git
-[submodule "trading-system-notes"]
-	path = trading-system-notes
-	url = https://github.com/zzxscodes/trading-system-notes.git

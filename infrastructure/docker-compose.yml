@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  gravit-demo:
+    build: .
+    command: ./demo --full-pm-pipeline --multi-chain
+    environment:
+      - ENABLE_QUANTUM=true

@@ -1,0 +1,23 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [ main, v0.2 ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: sudo apt-get install -y cmake g++
+
+      - name: Build
+        run: |
+          cmake -DENABLE_QUANTUM=ON -DENABLE_MULTI_CHAIN=ON .
+          make -j2
+
+      - name: Run Demo
+        run: ./demo --full-pm-pipeline --headless
