@@ -1,6 +1,10 @@
 // Observability & Metrics Collector
-#include "metrics_collector.h"
 #include <iostream>
+
+class MetricsCollector {
+public:
+    void reportPilotMetrics();
+};
 
 void MetricsCollector::reportPilotMetrics() {
     std::cout << "[Metrics] Capital Efficiency: 10.9x\n";

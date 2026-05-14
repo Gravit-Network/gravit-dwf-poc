@@ -1,9 +1,0 @@
-apiVersion: gravit.dwf/v1
-kind: GravitDWFIntegration
-metadata:
-  name: falcon-susdf-pipeline
-spec:
-  autonomyLevel: AUTOPILOT
-  falconMetrics: enabled
-  hftNodeSelector: numa-node-0
-  replicaCount: 16

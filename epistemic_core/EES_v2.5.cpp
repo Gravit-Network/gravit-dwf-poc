@@ -1,7 +1,13 @@
 // Epistemic Execution System v2.5 - Gravit x DWF
-#include "EES_v2.5.h"
 #include <iostream>
+#include <string>
 #include <vector>
+
+class EESv2_5 {
+public:
+    void validatePortfolio(const std::vector<std::string>& positions);
+    double calculateDynamicLTV();
+};
 
 void EESv2_5::validatePortfolio(const std::vector<std::string>& positions) {
     std::cout << "[Gravit EES v2.5] Validating portfolio with " << positions.size() << " positions...\n";

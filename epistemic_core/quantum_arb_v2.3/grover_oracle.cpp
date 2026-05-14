@@ -1,5 +1,9 @@
-#include "grover_oracle.h"
 #include <iostream>
+
+class GroverOracle {
+public:
+    void searchCrossMarketEdges();
+};
 
 void GroverOracle::searchCrossMarketEdges() {
     std::cout << "[Grover Oracle] Searching 2^18 states...\n";

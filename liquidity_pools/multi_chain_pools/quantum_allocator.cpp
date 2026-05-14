@@ -1,6 +1,10 @@
 // Quantum Liquidity Allocator
-#include "quantum_allocator.h"
 #include <iostream>
+
+class QuantumAllocator {
+public:
+    void allocateLiquidity(double amount);
+};
 
 void QuantumAllocator::allocateLiquidity(double amount) {
     std::cout << "[Quantum Allocator] Optimizing $" << amount << " across Solana, Arbitrum and Aptos...\n";

@@ -1,6 +1,11 @@
 // Probability Perpetuals Engine - Gravit x DWF
-#include "probability_perpetuals.h"
 #include <iostream>
+#include <string>
+
+class ProbabilityPerps {
+public:
+    void openPosition(const std::string& market, double leverage);
+};
 
 void ProbabilityPerps::openPosition(const std::string& market, double leverage) {
     std::cout << "[Perps Layer] Opened " << leverage << "x leveraged position on " << market << std::endl;

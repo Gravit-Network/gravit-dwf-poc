@@ -1,4 +1,9 @@
-#include "vqe_optimizer.h"
+#include <iostream>
+
+class VQE {
+public:
+    void optimizeAllocation();
+};
 
 void VQE::optimizeAllocation() {
     std::cout << "[VQE Optimizer] Minimizing cost function for liquidity allocation...\n";

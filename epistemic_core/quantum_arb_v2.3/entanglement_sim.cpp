@@ -1,6 +1,10 @@
 // Quantum Entanglement Simulator
-#include "entanglement_sim.h"
 #include <iostream>
+
+class EntanglementSim {
+public:
+    void simulateCorrelations();
+};
 
 void EntanglementSim::simulateCorrelations() {
     std::cout << "[Entanglement Simulator] Processing cross-market correlations...\n";
